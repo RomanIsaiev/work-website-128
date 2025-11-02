@@ -10,6 +10,11 @@ const swiperPractice = new Swiper('.swiper-practice', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+  breakpoints: {
+    768: {
+      spaceBetween: 12,
+    },
+  },
 });
 
 const swiperCases = new Swiper('.cases-swiper', {
@@ -19,5 +24,11 @@ const swiperCases = new Swiper('.cases-swiper', {
   navigation: {
     nextEl: '.cases-button-next',
     prevEl: '.cases-button-prev',
+  },
+  breakpoints: {
+    768: {
+      spaceBetween: 12,
+      slidesPerView: 4,
+    },
   },
 });

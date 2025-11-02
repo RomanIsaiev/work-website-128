@@ -3,14 +3,14 @@ document.addEventListener('DOMContentLoaded', function () {
   const boxes = document.querySelectorAll('.item-show-box');
 
   // 1. Сразу открыть первый
-  if (boxes.length > 0) {
-    boxes[0].style.maxHeight = boxes[0].scrollHeight + 'px';
-    boxes[0].style.opacity = 1;
+  // if (boxes.length > 0) {
+  //   boxes[0].style.maxHeight = boxes[0].scrollHeight + 'px';
+  //   boxes[0].style.opacity = 1;
 
-    const firstIcon =
-      boxes[0].previousElementSibling.querySelector('.program-icon');
-    if (firstIcon) firstIcon.classList.add('open');
-  }
+  //   const firstIcon =
+  //     boxes[0].previousElementSibling.querySelector('.program-icon');
+  //   if (firstIcon) firstIcon.classList.add('open');
+  // }
 
   // 2. Аккордеон
   buttons.forEach(btn => {
