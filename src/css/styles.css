@@ -1846,6 +1846,7 @@ body {
 
 .cases {
   padding: 3.75rem 0;
+  overflow: hidden;
 }
 
 .cases .container {
