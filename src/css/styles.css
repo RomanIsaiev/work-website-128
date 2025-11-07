@@ -26,6 +26,11 @@ body {
   width: 100%;
   margin: 0 auto;
   background: var(--white, #f7fcff);
+
+  -webkit-user-select: none; /* Safari/Chrome */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+  user-select: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -2209,8 +2214,8 @@ body {
 }
 
 .footer .feel-logo {
-  width: 6.3125rem;
-  height: 6.5625rem;
+  width: 7.3125rem;
+  height: 7.5625rem;
   mix-blend-mode: difference;
 }
 
@@ -2297,14 +2302,14 @@ body {
   }
 
   .footer .feel-logo {
-    width: 8.625rem;
-    height: 9rem;
+    width: 9.625rem;
+    height: 10rem;
     mix-blend-mode: difference;
   }
 
   .footer .academy-logo {
-    width: 5.5rem;
-    height: 6.1875rem;
+    width: 7.5rem;
+    height: 8.1875rem;
   }
 
   .footer .media-rules-box {
