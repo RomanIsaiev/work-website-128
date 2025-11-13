@@ -1426,6 +1426,15 @@ body {
   gap: 0.5rem;
 }
 
+.additional-item.close .add-check {
+  display: none;
+}
+
+.additional-item.close .add-item-text {
+  opacity: 0.4;
+  text-decoration: line-through;
+}
+
 .add-item-text {
   color: var(--black, #232323);
   font-family: Gilroy;
@@ -1436,6 +1445,10 @@ body {
   letter-spacing: -0.36px;
 
   max-width: 22.563rem;
+}
+
+.add-item-text span {
+  font-weight: 700;
 }
 
 /* exclusive tariff */
@@ -2535,4 +2548,5 @@ body {
   display: flex;
   margin: 0 auto;
   justify-content: center;
+  text-transform: uppercase;
 }
