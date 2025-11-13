@@ -1321,6 +1321,22 @@ body {
 }
 
 .tariffs .bonus-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.bonus-gift {
+  fill: #ff7fae;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.tariffs .bonus-item.close .bonus-gift {
+  fill: rgba(162, 165, 167, 1);
+}
+
+.bonus-item-text {
   color: var(--black, #232323);
   font-family: Gilroy;
   font-size: 0.9375em;
@@ -1328,13 +1344,14 @@ body {
   font-weight: 500;
   line-height: 120%;
   letter-spacing: -0.01875em;
+  max-width: 15.625rem;
 }
 
-.tariffs .bonus-item span {
+.tariffs .bonus-item-text span {
   font-weight: 700;
 }
 
-.tariffs .bonus-item.close {
+.tariffs .bonus-item.close .bonus-item-text {
   text-decoration: line-through;
   opacity: 0.4;
 }
@@ -1362,6 +1379,63 @@ body {
   letter-spacing: -0.01875em;
 
   width: 15.75rem;
+}
+
+/* final */
+
+.final-item-text {
+  color: var(--black, #232323);
+  font-family: Gilroy;
+  font-size: 0.93em;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: -0.01875em;
+}
+
+.final-item-text span {
+  font-weight: 700;
+}
+
+/* module */
+
+.module-item {
+  color: var(--black, #232323);
+  font-family: Gilroy;
+  font-size: 0.9375em;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 21.6px */
+  letter-spacing: -0.02em;
+}
+
+.module-item span {
+  font-weight: 700;
+}
+
+/* additional */
+
+.add-check {
+  width: 0.9375rem;
+  height: 0.9375rem;
+}
+
+.additional-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.add-item-text {
+  color: var(--black, #232323);
+  font-family: Gilroy;
+  font-size: 0.9375em;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 21.6px */
+  letter-spacing: -0.36px;
+
+  max-width: 22.563rem;
 }
 
 /* exclusive tariff */
@@ -1463,6 +1537,10 @@ body {
 
 .link-btn {
   display: block;
+}
+
+.link-btn.desktop {
+  display: none;
 }
 
 .btn-text-wrapper {
@@ -1567,6 +1645,75 @@ body {
     letter-spacing: -0.025em;
   }
 
+  .tariffs .bonus-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .bonus-gift {
+    fill: #ff7fae;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .tariffs .bonus-item.close .bonus-gift {
+    fill: rgba(162, 165, 167, 1);
+  }
+
+  .bonus-item-text {
+    color: var(--black, #232323);
+    font-family: Gilroy;
+    font-size: 0.9375em;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    letter-spacing: -0.01875em;
+    max-width: 21.625rem;
+  }
+
+  .add-check {
+    width: 1.3125rem;
+    height: 1.3125rem;
+  }
+
+  /* module */
+
+  .module-item {
+    color: var(--black, #232323);
+    font-family: Gilroy;
+    font-size: 1.125em;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 21.6px */
+    letter-spacing: -0.02em;
+  }
+
+  /* additional */
+
+  .add-check {
+    width: 1.313rem;
+    height: 1.313rem;
+  }
+
+  .additional-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .add-item-text {
+    color: var(--black, #232323);
+    font-family: Gilroy;
+    font-size: 1.125em;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 21.6px */
+    letter-spacing: -0.02em;
+
+    max-width: 22.563rem;
+  }
+
   /* tariff bonus box */
 
   .tariffs .bonus-box {
@@ -1642,13 +1789,17 @@ body {
     background: var(--light-blue, #dceaf6);
   }
 
-  .link-btn {
+  .link-btn.desktop {
     display: flex;
     align-items: center;
     width: 100%;
     max-width: 65rem;
     margin: 0 auto;
     gap: 0.63rem;
+  }
+
+  .link-btn.mobile {
+    display: none;
   }
 
   .btn-text-wrapper {
@@ -2199,7 +2350,7 @@ body {
 
 .footer {
   padding-top: 3.75rem;
-  padding-bottom: 2.5rem;
+  padding-bottom: 7.5rem;
 }
 
 .footer .container {
@@ -2360,4 +2511,21 @@ body {
 
     max-width: 12rem;
   }
+}
+
+/* scroll */
+
+.scroll-container {
+  display: none;
+}
+
+.scroll-container.js-show {
+  position: fixed;
+  display: block;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 30px;
+  z-index: 998;
+  max-width: 80%;
+  width: 100%;
 }
